@@ -1,10 +1,17 @@
-<html th:replace="~{fragments/header :: header}">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contact - My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div th:replace="~{fragments/header :: header}"></div>
+</head>
 <body>
     <div th:replace="~{fragments/navigation :: navigation}"></div>
 
     <div class="container mt-5">
         <h1 class="text-center mb-5">Contact Me</h1>
-        
+
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4">
@@ -28,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -38,7 +45,7 @@
                             <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
                             <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> San Francisco, CA</li>
                         </ul>
-                        
+
                         <div class="social-links mt-4">
                             <a href="#" class="btn btn-outline-dark me-2"><i class="fab fa-github"></i> GitHub</a>
                             <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -53,3 +60,4 @@
     <div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>
+

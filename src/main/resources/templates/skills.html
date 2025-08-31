@@ -1,10 +1,17 @@
-<html th:replace="~{fragments/header :: header}">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Skills - My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div th:replace="~{fragments/header :: header}"></div>
+</head>
 <body>
     <div th:replace="~{fragments/navigation :: navigation}"></div>
 
     <div class="container mt-5">
         <h1 class="text-center mb-5">My Skills</h1>
-        
+
         <div class="row">
             <div th:each="skill : ${skills}" class="col-md-6 mb-4">
                 <div class="card">
@@ -14,7 +21,7 @@
                             <span th:text="${skill.category}">Category</span>
                         </p>
                         <div class="progress">
-                            <div class="progress-bar" 
+                            <div class="progress-bar"
                                  th:attr="style='width: ' + ${skill.proficiency} + '%;'"
                                  th:text="${skill.proficiency} + '%'">
                                 90%
@@ -29,3 +36,4 @@
     <div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>
+

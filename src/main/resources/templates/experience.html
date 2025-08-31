@@ -1,17 +1,24 @@
-<html th:replace="~{fragments/header :: header}">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Experience - My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div th:replace="~{fragments/header :: header}"></div>
+</head>
 <body>
     <div th:replace="~{fragments/navigation :: navigation}"></div>
 
     <div class="container mt-5">
         <h1 class="text-center mb-5">Work Experience</h1>
-        
+
         <div class="timeline">
             <div th:each="exp : ${experiences}" class="timeline-item">
                 <div class="timeline-content">
                     <h3 th:text="${exp.position}">Position</h3>
                     <h4 th:text="${exp.company}">Company</h4>
                     <p class="text-muted">
-                        <span th:text="${#temporals.format(exp.startDate, 'MMM yyyy')}">Start Date</span> - 
+                        <span th:text="${#temporals.format(exp.startDate, 'MMM yyyy')}">Start Date</span> -
                         <span th:text="${exp.current} ? 'Present' : ${#temporals.format(exp.endDate, 'MMM yyyy')}">End Date</span>
                     </p>
                     <p th:text="${exp.description}">Job description...</p>
@@ -23,3 +30,4 @@
     <div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>
+
