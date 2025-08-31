@@ -46,7 +46,7 @@ public class PortfolioController {
             new Project(
                 "E-Commerce Platform", 
                 "A full-featured online shopping platform with user authentication, product management, and payment processing.",
-                "/images/project1.jpg",
+                "/images/project1.png",
                 Arrays.asList("Java", "Spring Boot", "Thymeleaf", "MySQL"),
                 "https://example-ecommerce.com",
                 "https://github.com/johndoe/ecommerce-platform"
@@ -62,7 +62,7 @@ public class PortfolioController {
             new Project(
                 "Weather Dashboard", 
                 "A responsive weather application that displays current and forecasted weather conditions for any location.",
-                "/images/project3.jpg",
+                "/images/project3.png",
                 Arrays.asList("HTML", "CSS", "JavaScript", "Weather API"),
                 "https://example-weather.com",
                 "https://github.com/johndoe/weather-dashboard"
