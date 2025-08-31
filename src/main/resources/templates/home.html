@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home - My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div th:replace="~{fragments/header :: header}"></div>
+</head>
+<body>
+    <div th:replace="~{fragments/navigation :: navigation}"></div>
+
+    <div class="container mt-5">
+        <section class="hero-section text-center py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <img th:src="@{/images/profile.jpg}" alt="Profile" class="rounded-circle mb-4" width="150" height="150">
+                    <h1 th:text="${name}">John Doe</h1>
+                    <h2 class="text-muted" th:text="${title}">Full Stack Developer</h2>
+                    <p class="lead mt-3" th:text="${about}">I'm a passionate developer with 5+ years of experience...</p>
+                    <a th:href="@{/contact}" class="btn btn-primary mt-3">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects py-5">
+            <h2 class="text-center mb-5">Featured Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img th:src="@{/images/project1.jpg}" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Commerce Platform</h5>
+                            <p class="card-text">A full-featured online shopping platform with user authentication...</p>
+                            <a th:href="@{/projects}" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img th:src="@{/images/project2.jpg}" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Task Management App</h5>
+                            <p class="card-text">A collaborative task management application with real-time updates...</p>
+                            <a th:href="@{/projects}" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img th:src="@{/images/project3.jpg}" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Weather Dashboard</h5>
+                            <p class="card-text">A responsive weather application that displays current and forecasted weather...</p>
+                            <a th:href="@{/projects}" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a th:href="@{/projects}" class="btn btn-primary">View All Projects</a>
+            </div>
+        </section>
+    </div>
+
+    <div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
+
